@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Droid+Serif:400,400i,700,700i');
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100px;
+  width: 100vw;
+  background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.8;
+  
+}
+
+nav {
+  height: 100%;
+  mask-image: color linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 0px 0;
+
+}
+
+nav ul {
+  height:100%;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, .1), inset 0 0 1px rgba(255, 255, 255, 1);
+
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 40px;
+  font-family: 'Cabin';
+  font-weight: 500;
+  text-transform:uppercase;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  color: #555555;
+}
+
+nav ul li a:active {
+  text-decoration: underline;
+}

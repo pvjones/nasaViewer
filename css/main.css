@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Droid+Serif:400,400i,700,700i');
+
+/*styling for home view*/
+
+.masthead {
+  height: 100vh;
+  width: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+  font-family: 'Cabin', sans-serif;
+    font-size: 80px;
+    color: #444444;
+    -webkit-text-stroke: 1px #DDDDDD;
+}
+
+.about {
+  width: 100vw;
+  background-color: #DDDDDD;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-header {
+  width: 30%;
+  height: 150px;
+  padding: 40px;
+
+  display: flex;
+    align-items: center;
+
+  font-family: 'Cabin', sans-serif;
+    font-size: 60px;
+    color: #444444;
+}
+
+.about-body {
+  width: 60%;
+  padding: 40px;
+
+  font-family: 'Droid Serif', serif;
+    font-size: 24px;
+    color: #444444;
+    line-height: 42px;
+
+}
+
+/*styling for apodMain view*/
+
+.apod-main {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #444444;
+  padding: 150px 50px 100px 50px;
+
+  font-family: 'Droid Serif', serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #CCCCCC;
+
+  display: flex;
+    justify-content: space-around;
+}
+
+.apod-main .photo-container {
+  width: 60%;
+  height: 100%;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apod-main .photo-container img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #AAAAAA;
+}
+
+.apod-main .info-container {
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+    flex-direction: column;
+}
+
+.apod-main .title {
+  font-family: 'Cabin', sans-serif;
+    font-size: 40px;
+    line-height: 44px;
+}
+
+.apod-main .copyright-and-date {
+  margin-top: 15px;
+  text-transform: uppercase;
+
+  display: flex;
+    justify-content: space-between;
+}
+
+.apod-main .copyright {
+
+}
+
+.apod-main .date {
+
+}
+
+.apod-main .description {
+  margin-top: 50px;
+}
