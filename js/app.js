@@ -5,12 +5,12 @@ angular.module('nasaViewer', ['ui.router'])
       .state('home', {
         url: '/',
         controller: 'mainContr',
-        templateUrl: './../views/home.html'
+        templateUrl: '../views/home.html'
       })
       .state('apod', {
         url: '/apod',
         controller: 'apodContr',
-        templateUrl: './../views/apod.html'
+        templateUrl: '../views/apod.html'
       });
       // .state('apodByDate', {
       //   url: '/apod-by-date',
