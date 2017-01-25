@@ -1,24 +1,45 @@
 <div class="masthead" ng-init="setBgImage()" ng-style="bgUrl">
+  
   <div class="masthead-top">
     <span></span>
   </div>
+
   <div class="masthead-middle">
     <span>SKYdash</span>
   </div>
+
   <div class="masthead-bottom">
+
     <div class="masthead-bottom-left">
       <live-clock format="12"></live-clock>
     </div>
-    <div class=masthead-bottom-right>
+
+    <div class="masthead-bottom-middle">
       <span>
         Current sky-viewing conditions: <br />
       </span>
       <span class="sky-view">
-        {{skyView}}
+        {{skyView}} <br />
+      </span>
+      <span>
+        Cloud cover: {{cloudCover}}% | Visibility: {{visibility}} mi
       </span>
     </div>
+
+    <div class="masthead-bottom-right">
+      <div style="padding-right: 10px; border-right: 1px solid #FFFFFF">
+      <span>Sunrise: <br /> {{ sunrise | date:'hh:mm a'}}</span>
+      </div>
+
+      <div style="padding-left: 10px;">
+      <span>Sunset: <br /> {{ sunset | date:'hh:mm a'}}</span>
+      </div>
+    </div>
+
   </div>
+
 </div>
+
 <div class="about">
   <div class="about-header">
     <div>
@@ -26,6 +47,7 @@
     </div>
   </div>
   <div class="about-body" id="about">
-    <p>SKYdash is a simple web app designed to give users access to data available through NASA's public APIs. It's built using AngularJS 1.x.</p>
+    <p>SKYdash is your dashboard for viewing the stars</p>
+    <p>It's a simple web app designed to give you access to data available through a variety of NASA's public APIs. It's built using AngularJS 1.x.</p>
   </div>
 </div>
