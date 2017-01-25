@@ -5,19 +5,55 @@
 .masthead {
   height: 100vh;
   width: 100vw;
+  padding: 50px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
 
   display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
 
+.masthead-middle {
   font-family: 'Cabin', sans-serif;
-    font-size: 80px;
+    font-size: 90px;
+    font-weight: 700;
     color: #444444;
     -webkit-text-stroke: 1px #DDDDDD;
+}
+
+.masthead-bottom {
+  width: 100%;
+  text-align: center;
+  font-family: 'Droid Serif', serif;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 38px;
+    -webkit-text-stroke: 0px;
+  display: flex;
+    justify-content: space-between;
+}
+
+.masthead-bottom-left {
+  width: 30%;
+}
+
+.masthead-bottom-right {
+  width: 30%;
+}
+
+.live-clock-time {
+  font-family: 'Cabin', sans-serif;
+  font-size: 32px;
+}
+
+.sky-view {
+  font-family: 'Cabin', sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
 }
 
 .about {
@@ -53,19 +89,78 @@
 
 /*styling for apodMain view*/
 
-.apod-main {
-  min-height: 100vh;
+.apod {
+  min-width: 1200px;
   width: 100vw;
+  min-height: 100vh;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+
   background-color: #444444;
-  padding: 150px 50px 100px 50px;
+  padding: 150px 0px 100px 0px;
+}
+
+.request-by-date {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  min-width: 100px;
+  width: 15%;
+  height: 30px;
+  float: left;
+  text-align: center;
+  margin: 0px 10px 0px 0px ;
+  background-color: #666666;
+  border: 1px solid #999999;
+    border-radius: 4px;
+  resize: none;
+  font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    color: #444444;
+}
+
+input:focus {
+  background-color: #777777;
+  color: #FFFFFF;
+}
+
+button {
+  min-width: 150px;
+  width: 30%;
+  height: 30px;
+  float: left;
+  text-align: center;
+  margin: 0;
+  background-color: #999999;
+  border: 1px solid #DDDDDD;
+    border-radius: 4px;
+  resize: none;
+  font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    color: #FFFFFF;
+}
+
+button:hover {
+  background-color: #888888
+}
+
+
+.apod-main {
+  height: 100%;
+  width: 90%;
 
   font-family: 'Droid Serif', serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 26px;
     color: #CCCCCC;
 
   display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .apod-main .photo-container {
@@ -73,8 +168,7 @@
   height: 100%;
 
   display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .apod-main .photo-container img {
@@ -105,14 +199,10 @@
     justify-content: space-between;
 }
 
-.apod-main .copyright {
-
-}
-
-.apod-main .date {
-
-}
-
 .apod-main .description {
   margin-top: 50px;
+}
+
+.apod-main .retrieve-apod {
+
 }
