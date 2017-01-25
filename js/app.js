@@ -21,6 +21,4 @@ angular.module('nasaViewer', ['ui.router'])
       $urlRouterProvider
         .otherwise('/')
 
-
-
-  })
+  });
