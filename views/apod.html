@@ -17,11 +17,11 @@
           </form>
         </div>
         <div>
-          <button class="current-apod" ng-click="getCurrentApod()">TODAY'S APOD</button>
+          <button class="current-apod" ng-click="getCurrentApod()" ng-init="getCurrentApod()">TODAY'S APOD</button>
         </div>
       </div>
 
-      <img ng-src="{{currentApod.hdurl}}" />
+      <img ng-src="{{currentApod.url}}" />
     </div>
 
     <div class="info-container">

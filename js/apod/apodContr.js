@@ -9,10 +9,6 @@ angular.module('nasaViewer').controller('apodContr', function($scope, apodServ) 
   };
 
 
-  apodServ.getCurrentApod().then(function(response) {
-    $scope.currentApod = response.data;
-  });
-
   $scope.getCurrentApod = function() {
     apodServ.getCurrentApod().then(function(response) {
       $scope.currentApod = response.data;
