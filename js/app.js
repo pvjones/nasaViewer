@@ -1,5 +1,5 @@
 angular.module('nasaViewer', ['ui.router'])
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $stateProvider
       .state('home', {
@@ -21,4 +21,5 @@ angular.module('nasaViewer', ['ui.router'])
       $urlRouterProvider
         .otherwise('/')
 
+      $locationProvider.html5mode(true);
   });
