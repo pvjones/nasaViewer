@@ -8,15 +8,17 @@ angular.module('nasaViewer').controller('apodContr', function($scope, apodServ) 
     $scope.apodYears.push(i);
   };
 
-
-  $scope.getCurrentApod = function() {
+  var getCurrentApod = function () {
     apodServ.getCurrentApod().then(function(response) {
       $scope.currentApod = response.data;
       $scope.yyyy = '';
       $scope.mm = '';
       $scope.dd = '';
     })
-  }
+  };
+
+  getCurrentApod();
+  $scope.getCurrentApod = getCurrentApod;
 
   $scope.getApodByDate = function(yyyy, mm, dd) {
     var queryDate = (yyyy + "-" + mm + "-" + dd).toString();
