@@ -24,36 +24,41 @@ angular.module('nasaViewer').controller('mainContr', function($scope, apodServ, 
   }
 
 
+  $scope.skyView = "Loading..."
+  $scope.cloudCover= "..."
+  $scope.visibility = "..."
+
   apodServ.getCurrentApod().then(function(response) {
     $scope.currentApod = response.data;
   });
-
-
 
   geolocationFact.getCurrentPosition().then(function(response) {
     var userLat = response.coords.latitude;
     var userLong = response.coords.longitude;
     weatherServ.getWeather(userLat, userLong).then(function(response) {
       var weatherObj = response.data.currently;
-      $scope.cloudCover = weatherObj.cloudCover;
+      $scope.cloudCover = weatherObj.cloudCover * 100;
       $scope.weatherSummary = weatherObj.summary;
       $scope.visibility = weatherObj.visibility;
       $scope.temperature = weatherObj.temperature;
-
+      $scope.sunrise = response.data.daily.data[0].sunriseTime * 1000; //convert from unix to JS time
+      $scope.sunset = response.data.daily.data[0].sunsetTime * 1000;
+      $scope.moonPhase = response.data.daily.data[0].moonPhase;
 
       var skyView = ""
-      if (weatherObj.cloudCover <= 0.1 && weatherObj.visibility >= 9) {
+      if ($scope.cloudCover === 0 && $scope.visibility > 9) {
         skyView = "excellent";
-      } else if (weatherObj.cloudCover <= 0.2 || weatherObj.visibility >= 5) {
+      } else if (weatherObj.cloudCover < 0.2 && weatherObj.visibility > 8) {
         skyView = "good";
-      } else if (weatherObj.cloudCover <= 0.3 || weatherObj.visibility >= 3) {
+      } else if (weatherObj.cloudCover < 0.3 && weatherObj.visibility > 5) {
         skyView = "fair";
-      } else if (weatherObj.cloudCover <= 0.5 || weatherObj.visibility >= 1) {
+      } else if (weatherObj.cloudCover > 0.3 || weatherObj.visibility < 1) {
         skyView = "poor";
+      } else {
+        skyView = "unknown";
       }
 
       $scope.skyView = skyView;
-      console.log($scope.skyView);
     })
   });
 
