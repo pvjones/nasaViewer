@@ -26,13 +26,14 @@
 }
 
 .masthead-bottom {
-  width: 100%;
+  width: 100vw;
   text-align: center;
   font-family: 'Droid Serif', serif;
     color: #FFFFFF;
     font-size: 18px;
     line-height: 38px;
     -webkit-text-stroke: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
     justify-content: space-between;
 }
